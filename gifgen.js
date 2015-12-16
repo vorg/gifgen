@@ -95,8 +95,8 @@ function makeGif(files) {
 plask.simpleWindow({
   settings: {
     type: '2d',
-    width: OUT_SIZE,
-    height: OUT_SIZE
+    width: 512,
+    height: 512
   },
   init: function() {
       this.on('filesDropped', function(e) {
@@ -107,6 +107,7 @@ plask.simpleWindow({
   draw: function() {
     var paint = this.paint;
     var canvas = this.canvas;
+    canvas.drawColor(0,0,0,255);
 
     if (this.frames) {
         var frame = this.frames[this.framenum % this.frames.length];
@@ -119,11 +120,15 @@ plask.simpleWindow({
             w = Math.floor(OUT_SIZE * frame.width / frame.height);
             h = OUT_SIZE;
         }
-        canvas.drawCanvas(paint, frame, (this.width - w)/2, (this.height - h)/2, w, h);
+        var x = (this.width - w)/2;
+        var y = (this.height - h)/2;
+        canvas.drawCanvas(paint, frame, x, y, x + w, y + h);
     }
     else {
         paint.setFill();
         paint.setColor(255,255,255,255);
+        paint.setTextSize(30);
+        paint.setAntiAlias(true);
         var msg = 'Drop images here';
         canvas.drawText(paint, msg, this.width/2 - paint.measureText(msg)/2, this.height/2);
     }
