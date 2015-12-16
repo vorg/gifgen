@@ -1,0 +1,28 @@
+{
+  "name": "gifgen",
+  "version": "1.0.0",
+  "description": "GIF Builder from image sequence",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Marcin Ignac",
+    "email": "marcin.ignac@gmail.com",
+    "url": "https://github.com/vorg"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "gif"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vorg/gifgen.git"
+  },
+  "homepage": "https://github.com/vorg/gifgen",
+  "bugs": {
+    "url": "https://github.com/vorg/gifgen/issues"
+  }
+}
