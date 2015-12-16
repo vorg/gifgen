@@ -9,7 +9,10 @@
     "email": "marcin.ignac@gmail.com",
     "url": "https://github.com/vorg"
   },
-  "dependencies": {},
+  "dependencies": {
+    "neuquant": "^1.0.2",
+    "omggif": "^1.0.8"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "node test.js"
