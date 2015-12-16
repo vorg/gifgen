@@ -33,7 +33,7 @@ function fileToFrameImage(file) {
 
 function canvasToRgb(canvas) {
     var bytes = [];
-    var pixels = canvas.pixels;
+    var pixels = canvas.pixels || canvas;
     var w = canvas.width;
     var h = canvas.height;
     for(var y=0; y<h; y++) {
